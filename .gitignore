@@ -1,0 +1,19 @@
+# Terraform state and secrets
+import/terraform.tfvars
+import/terraform.tfstate
+import/terraform.tfstate.backup
+import/.terraform.lock.hcl
+import/.terraform/
+
+# Dev environment secrets/state
+terraform/env/dev/terraform.tfvars
+terraform/env/dev/terraform.tfstate
+terraform/env/dev/terraform.tfstate.backup
+terraform/env/dev/.terraform.lock.hcl
+terraform/env/dev/.terraform/
+
+# Ignore general Terraform state/lock files if they exist at root
+# terraform.tfstate
+# terraform.tfstate.backup
+# .terraform.lock.hcl
+# .terraform/
