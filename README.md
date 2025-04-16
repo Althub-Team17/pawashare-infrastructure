@@ -1,11 +1,15 @@
 # PawaShare - DevOps Overview
 
-**Role:** DevOps Engineer
-**Environment:** Vercel (Frontend), Google Cloud Run & Cloud Build (Backend)
-**Version Control:** GitHub
-**Status:** ✅ Functional MVP in Deployment
+* **Role:** DevOps Engineer
+* **Environment:** Vercel (Frontend), Google Cloud Run & Cloud Build (Backend)
+* **Version Control:** GitHub
+* **Status:** ✅ Functional MVP in Deployment
 
-## 🔧 Project Overview
+##  Architecture Diagram
+
+![Architecture Diagram](./assets/architecture.png)
+
+##  Project Overview
 
 PawaShare is a solar energy sharing platform enabling communities to rent, lend, or subscribe to solar-powered resources.
 
@@ -18,13 +22,10 @@ PawaShare is a solar energy sharing platform enabling communities to rent, lend,
 *   **Version Control:** GitHub (with PR flows)
 *   **Secrets Management:** GitHub Secrets (Vercel) & GCP Secret Manager (Cloud Run)
 
-## 📐 Architecture Diagram
 
-![Architecture Diagram](./assets/architecture.png)
+##  CI/CD Architecture Details
 
-## 🧩 CI/CD Architecture Details
-
-### 📦 Frontend – Vercel
+###  Frontend – Vercel
 
 *   **Repository:** `pawashare-frontend` (Assumed name, replace if different)
 *   **Hosting:** Vercel (Free Tier)
@@ -36,7 +37,7 @@ PawaShare is a solar energy sharing platform enabling communities to rent, lend,
     *   Linting & type-checking enabled
     *   Fallback API environment variables for localhost
 
-### ⚙️ Backend – Google Cloud Run
+###  Backend – Google Cloud Run
 
 *   **Repository:** `pawashare-backend` (Assumed name, replace if different)
 *   **Hosting:** Google Cloud Run
@@ -65,20 +66,20 @@ PawaShare is a solar energy sharing platform enabling communities to rent, lend,
 *   **Environment Variables:** Managed in Cloud Run service settings (potentially populated via GCP Secret Manager). Secrets are injected at runtime.
 *   **Deployment Logs:** Available in GCP Cloud Logging.
 
-## 🔒 Secrets & Environment Management Summary
+##  Secrets & Environment Management Summary
 
 | Environment | Tool                                     | Variables Used                     |
 | :---------- | :--------------------------------------- | :--------------------------------- |
 | Vercel      | GitHub Secrets + Vercel Dashboard        | `VERCEL_*`, `NEXT_PUBLIC_API_URL`  |
 | GCP         | GCP Secret Manager + Cloud Run Settings  | `MONGO_URI`, `NODE_ENV`, JWT/secrets |
 
-## 📦 Containerization
+##  Containerization
 
 *   **Docker Setup:** Separate `Dockerfile` for frontend and backend (using multi-stage builds for production).
 *   **Docker Compose:** Planned for local development environment setup.
 *   **ECR Support (Optional):** Images are standard OCI images, portable to other registries like AWS ECR if needed.
 
-## 🚀 Deployment Strategy
+##  Deployment Strategy
 
 | Layer    | Platform         | Tool             | Action                             |
 | :------- | :--------------- | :--------------- | :--------------------------------- |
@@ -96,7 +97,7 @@ PawaShare is a solar energy sharing platform enabling communities to rent, lend,
 *   Configured API integration paths between frontend and backend.
 *   Tested end-to-end signup & login flows.
 
-## 🧪 Tools Used
+##  Tools Used
 
 *   **CI/CD:** GitHub Actions, Google Cloud Build
 *   **Containers:** Docker
@@ -105,7 +106,7 @@ PawaShare is a solar energy sharing platform enabling communities to rent, lend,
 *   **Monitoring:** GCP Cloud Logging (basic)
 *   **Secrets:** GitHub Secrets, GCP Secret Manager (manual config)
 
-## 🧱 Planned Improvements
+##  Planned Improvements
 
 | Feature                       | Status      | Notes                                                                 |
 | :---------------------------- | :---------- | :-------------------------------------------------------------------- |
@@ -115,7 +116,7 @@ PawaShare is a solar energy sharing platform enabling communities to rent, lend,
 | Security & Monitoring         | Coming Soon | Integrate Snyk, Log-based metrics, or Grafana.                        |
 | Terraform Provisioning        | Done        | Backend infra (AR, Run, Build Trigger) managed via Terraform.         |
 
-## 🌍 URLs & Links
+##  URLs & Links
 
 *   **Frontend Production:** [pawashare-frontend.vercel.app](https://pawashare-frontend.vercel.app)
 *   **API Endpoint (Cloud Run):** [pawashare-backend-856444188471.us-central1.run.app](https://pawashare-backend-856444188471.us-central1.run.app)
