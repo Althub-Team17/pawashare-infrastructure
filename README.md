@@ -1,13 +1,28 @@
-# PawaShare - DevOps Overview
-
-* **Role:** DevOps Engineer
-* **Environment:** Vercel (Frontend), Google Cloud Run & Cloud Build (Backend)
-* **Version Control:** GitHub
-* **Status:** ✅ Functional MVP in Deployment
-
+# PawaShare - Progress Update
 ##  Architecture Diagram
-
 ![Architecture Diagram](./assets/architecture.png)
+
+###  Work Summary (Accomplished)
+
+*   Created GitHub repositories and version control policies (branching, PRs).
+*   Set up Vercel and GCP accounts.
+*   Dockerized frontend and backend applications.
+*   Implemented CI/CD pipelines:
+    *   GitHub Actions for frontend (Lint, Type-check, Build, Deploy).
+    *   Cloud Build for backend (Docker build & push, Cloud Run deploy).
+*   Configured API integration paths between frontend and backend.
+*   **Verified backend deployment accessibility via its base URL.** 
+*   **Successfully tested end-to-end user authentication flow (signup and login), confirming frontend-backend integration.** 
+
+
+###  URLs & Links
+
+*   **Frontend Production:** [pawashare-frontend.vercel.app](https://pawashare-frontend.vercel.app)
+*   **API Endpoint (Cloud Run):** [pawashare-backend-856444188471.us-central1.run.app](https://pawashare-backend-856444188471.us-central1.run.app)
+*   **Postman Collection:** [link to Postman](https://pawashare.postman.co/workspace/PAWASHARE-Workspace~9a3c8610-ddeb-4f7f-a9de-15d7b34079f2/collection/38838735-c6ab6cb1-4332-4cf4-bbff-9e63bc0f5e23?action=share&creator=38838735)
+*   **Figma Design:** [link to figma](https://www.figma.com/design/puwjUHFuqK0KCo6Lv8zD0l/P1?node-id=108-68)
+*   **GitHub Repositories:** [Link to Frontend Repo](https://github.com/Althub-Team17/pawashare-frontend) | [Link to Backend Repo](https://github.com/Althub-Team17/pawashare-backend)
+*   **Terraform Code:** [./terraform/README.md](./terraform/README.md)
 
 ##  Project Overview
 
@@ -24,10 +39,9 @@ PawaShare is a solar energy sharing platform enabling communities to rent, lend,
 
 
 ##  CI/CD Architecture Details
-
 ###  Frontend – Vercel
 
-*   **Repository:** `pawashare-frontend` (Assumed name, replace if different)
+*   **Repository:** `pawashare-frontend`
 *   **Hosting:** Vercel (Free Tier)
 *   **Deploy Trigger:** On push to `main` branch
 *   **Build Tool:** GitHub Actions + Vercel Action (`amondnet/vercel-action@v20`)
@@ -86,17 +100,6 @@ PawaShare is a solar energy sharing platform enabling communities to rent, lend,
 | Frontend | Vercel           | GitHub Actions   | Auto-deploy on PR merge to `main`  |
 | Backend  | Google Cloud Run | Cloud Build      | Auto-deploy container on push to `main` |
 
-## 📋 DevOps Work Summary (Accomplished)
-
-*   Created GitHub repositories and version control policies (branching, PRs).
-*   Set up Vercel and GCP accounts.
-*   Dockerized frontend and backend applications.
-*   Implemented CI/CD pipelines:
-    *   GitHub Actions for frontend (Lint, Type-check, Build, Deploy).
-    *   Cloud Build for backend (Docker build & push, Cloud Run deploy).
-*   Configured API integration paths between frontend and backend.
-*   Tested end-to-end signup & login flows.
-
 ##  Tools Used
 
 *   **CI/CD:** GitHub Actions, Google Cloud Build
@@ -116,14 +119,6 @@ PawaShare is a solar energy sharing platform enabling communities to rent, lend,
 | Security & Monitoring         | Coming Soon | Integrate Snyk, Log-based metrics, or Grafana.                        |
 | Terraform Provisioning        | Done        | Backend infra (AR, Run, Build Trigger) managed via Terraform.         |
 
-##  URLs & Links
-
-*   **Frontend Production:** [pawashare-frontend.vercel.app](https://pawashare-frontend.vercel.app)
-*   **API Endpoint (Cloud Run):** [pawashare-backend-856444188471.us-central1.run.app](https://pawashare-backend-856444188471.us-central1.run.app)
-*   **Postman Collection:** [link to Postman](https://pawashare.postman.co/workspace/PAWASHARE-Workspace~9a3c8610-ddeb-4f7f-a9de-15d7b34079f2/collection/38838735-c6ab6cb1-4332-4cf4-bbff-9e63bc0f5e23?action=share&creator=38838735)
-*   **Figma Design:** 
-*   **GitHub Repositories:** [Link to Frontend Repo](https://github.com/Althub-Team17/pawashare-frontend) | [Link to Backend Repo](https://github.com/Althub-Team17/pawashare-backend)
-*   **Terraform Code:** [./terraform/README.md](./terraform/README.md)
 
 ## Appendix: Why Cloud Run?
 
