@@ -29,6 +29,10 @@
 #### PawaShare is a solar energy sharing platform enabling communities to rent, lend, or subscribe to solar-powered resources.
 
 ![alt text](image.png)
+
+**API Endpoint (Cloud Run)**
+![image](https://github.com/user-attachments/assets/7f7f090a-f9cd-42ff-bfc5-3e1d7f7c79e0)
+
 **Platform Architecture:**
 
 *   **Frontend:** Next.js + Tailwind deployed via Vercel
